@@ -1,0 +1,185 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>3D Car Configurator</title>
+
+
+  <script type="importmap">
+
+  {
+    "imports": {
+
+      "three":
+        "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+
+      "three/addons/":
+        "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+
+    }
+  }
+
+  </script>
+  <script type="module" crossorigin src="/assets/index-ALsM7Eqt.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dbnc54pO.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div>
+
+      <h1>3D Car Configurator</h1>
+
+      <p>Customize your car</p>
+
+    </div>
+
+    <button id="rotateBtn">
+      Auto Rotate
+    </button>
+
+  </header>
+
+
+  <main class="app">
+
+    <!-- 3D Scene -->
+
+    <section class="scene-container">
+
+      <div id="scene">
+
+        <!-- Static fallback -->
+
+        <div id="fallback" class="fallback">
+
+          <img
+            src="/images/car-preview.jpg"
+            alt="3D car preview"
+          />
+
+          <div class="fallback-message">
+
+            <h3>3D Preview</h3>
+
+            <p>
+              Loading 3D model...
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="controls">
+
+        <span>🖱️ Drag to rotate</span>
+
+        <span>🔍 Scroll to zoom</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- Configurator -->
+
+    <aside class="configurator">
+
+      <h2>Customize</h2>
+
+
+      <div class="option">
+
+        <h3>Car Color</h3>
+
+        <div class="colors">
+
+          <button
+            class="color black active"
+            data-color="#111111">
+          </button>
+
+          <button
+            class="color red"
+            data-color="#d62828">
+          </button>
+
+          <button
+            class="color blue"
+            data-color="#2563eb">
+          </button>
+
+          <button
+            class="color green"
+            data-color="#15803d">
+          </button>
+
+          <button
+            class="color white"
+            data-color="#f5f5f5">
+          </button>
+
+          <button
+            class="color yellow"
+            data-color="#facc15">
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="option">
+
+        <h3>Wheels</h3>
+
+        <div class="wheel-options">
+
+          <button data-wheel="black">
+            Black
+          </button>
+
+          <button data-wheel="silver">
+            Silver
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <button
+        id="resetBtn"
+        class="reset">
+        Reset Configuration
+      </button>
+
+    </aside>
+
+  </main>
+
+
+  <!-- Three.js -->
+
+
+
+
+
+</body>
+
+</html>
+```
