@@ -1,0 +1,398 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.header {
+  height: 90px;
+
+  padding: 20px 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.header p {
+  color: #777;
+
+  margin-top: 5px;
+}
+
+.header button {
+  background: #111;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px 20px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   App
+======================================== */
+
+.app {
+  min-height: calc(100vh - 90px);
+
+  display: grid;
+
+  grid-template-columns: 1fr 320px;
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+
+/* ========================================
+   3D Scene
+======================================== */
+
+.scene-container {
+  position: relative;
+
+  min-height: 600px;
+
+  border-radius: 20px;
+
+  background: #fafafa;
+
+  overflow: hidden;
+}
+
+#scene {
+  position: relative;
+
+  width: 100%;
+
+  height: 600px;
+
+  min-height: 600px;
+}
+
+#scene canvas {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+
+/* ========================================
+   Fallback
+======================================== */
+
+.fallback {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #fafafa;
+
+  z-index: 1;
+}
+
+.fallback img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.fallback-message {
+  position: absolute;
+
+  bottom: 20px;
+
+  left: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.fallback-message h3 {
+  margin: 0 0 4px;
+}
+
+.fallback-message p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #666;
+}
+
+
+/* ========================================
+   Controls
+======================================== */
+
+.controls {
+  position: absolute;
+
+  bottom: 20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: rgba(255, 255, 255, 0.9);
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  gap: 20px;
+
+  font-size: 13px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.08);
+
+  z-index: 5;
+}
+
+
+/* ========================================
+   Configurator
+======================================== */
+
+.configurator {
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.configurator h2 {
+  margin-bottom: 30px;
+}
+
+.option {
+  margin-bottom: 30px;
+}
+
+.option h3 {
+  font-size: 16px;
+
+  margin-bottom: 15px;
+}
+
+
+/* ========================================
+   Colors
+======================================== */
+
+.colors {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.color {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 3px solid white;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 0 1px #ddd;
+
+  transition: 0.2s;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+.color.active {
+  box-shadow:
+    0 0 0 3px #111;
+}
+
+.black {
+  background: #111;
+}
+
+.red {
+  background: #d62828;
+}
+
+.blue {
+  background: #2563eb;
+}
+
+.green {
+  background: #15803d;
+}
+
+.white {
+  background: #eee;
+}
+
+.yellow {
+  background: #facc15;
+}
+
+
+/* ========================================
+   Wheels
+======================================== */
+
+.wheel-options {
+  display: flex;
+
+  gap: 10px;
+}
+
+.wheel-options button {
+  flex: 1;
+
+  padding: 12px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.wheel-options button:hover {
+  border-color: #111;
+}
+
+
+/* ========================================
+   Reset
+======================================== */
+
+.reset {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .scene-container {
+    min-height: 450px;
+  }
+
+  #scene {
+    height: 450px;
+
+    min-height: 450px;
+  }
+
+  .configurator {
+    width: 100%;
+  }
+
+  .controls {
+    font-size: 11px;
+
+    white-space: nowrap;
+  }
+
+}
+
